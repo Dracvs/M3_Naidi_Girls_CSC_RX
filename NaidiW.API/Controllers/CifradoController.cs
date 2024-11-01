@@ -7,6 +7,7 @@ using NaidiW.Business.Services;
 public class CifradoController : ControllerBase
 {
     [HttpPost]
+    [Route("DecodeNumeric")]
     public async Task<IActionResult> DecodeNumeric(string palabra)
     {
         var cifrado = new Cifrado();
@@ -15,6 +16,7 @@ public class CifradoController : ControllerBase
     }
 
     [HttpPost]
+    [Route("EncodeNumeric")]
     public async Task<IActionResult> EncodeNumeric(string palabra)
     {
         var cifrado = new Cifrado();
