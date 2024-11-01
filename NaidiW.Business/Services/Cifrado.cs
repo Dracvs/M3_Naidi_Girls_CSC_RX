@@ -6,6 +6,13 @@ namespace NaidiW.Business.Services;
 
 public class Cifrado : ICifrado
 {
+    public string CodificadorNumerico(string palabra)
+    {
+        //TODO: codificar lo que viene en palabra a números
+        // TODO: divididos por guiones, respetar los espacios.
+        return "";
+    }
+
     public string DecodificadorNumerico(string palabraClave)
     {
         var palabra = string.Empty;
@@ -130,7 +137,6 @@ public class Cifrado : ICifrado
 
             palabra += " ";
         }
-        
-        return palabra;
+        return palabra.TrimEnd();
     }
 }
