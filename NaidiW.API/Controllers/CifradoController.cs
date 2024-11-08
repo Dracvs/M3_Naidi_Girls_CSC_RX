@@ -23,4 +23,6 @@ public class CifradoController : ControllerBase
         var codificado = cifrado.CodificadorNumerico(palabra);
         return Ok(codificado);
     }
+
+    
 }

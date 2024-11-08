@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks.Dataflow;
 using Microsoft.VisualBasic;
 using NaidiW.Business.Interfaces;
 
@@ -8,9 +10,129 @@ public class Cifrado : ICifrado
 {
     public string CodificadorNumerico(string palabra)
     {
-        //TODO: codificar lo que viene en palabra a números
-        // TODO: divididos por guiones, respetar los espacios.
-        return "";
+        var palabraEncriptada = String.Empty;
+
+        var lista = palabra.Split(' ');
+        foreach (var valor in lista)
+        {
+            foreach (var item in valor)
+            {
+                if(item.Equals('a'))
+                {
+                    palabraEncriptada+= "1";
+                }
+                else if(item.Equals('b'))
+                {
+                    palabraEncriptada += "2";
+                }
+                else if(item.Equals('c'))
+                {
+                    palabraEncriptada += "3";
+                }
+                else if(item.Equals('d'))
+                {
+                    palabraEncriptada += "4";
+                }
+                else if(item.Equals('e'))
+                {
+                    palabraEncriptada += "5";
+                }
+                else if(item.Equals('f'))
+                {
+                    palabraEncriptada += "6";
+                }
+                else if(item.Equals('g'))
+                {
+                    palabraEncriptada += "7";
+                }
+                else if(item.Equals('h'))
+                {
+                    palabraEncriptada += "8";
+                }
+                else if(item.Equals('i'))
+                {
+                    palabraEncriptada += "9";
+                }
+                else if(item.Equals('j'))
+                {
+                    palabraEncriptada += "10";
+                }
+                else if(item.Equals('k'))
+                {
+                    palabraEncriptada += "11";
+                }
+                else if(item.Equals('l'))
+                {
+                    palabraEncriptada += "12";
+                }
+                else if(item.Equals('m'))
+                {
+                    palabraEncriptada += "13";
+                }
+                else if(item.Equals('n'))
+                {
+                    palabraEncriptada += "14";
+                }
+                else if(item.Equals('o'))
+                {
+                    palabraEncriptada += "15";
+                }
+                else if(item.Equals('p'))
+                {
+                    palabraEncriptada += "16";
+                }
+                else if(item.Equals('q'))
+                {
+                    palabraEncriptada += "17";
+                }
+                else if(item.Equals('r'))
+                {
+                    palabraEncriptada += "18";
+                }
+                else if(item.Equals('s'))
+                {
+                    palabraEncriptada += "19";
+                }
+                else if(item.Equals('t'))
+                {
+                    palabraEncriptada += "20";
+                }
+                else if(item.Equals('u'))
+                {
+                    palabraEncriptada += "21";
+                }
+                else if(item.Equals('v'))
+                {
+                    palabraEncriptada += "22";
+                }
+                else if(item.Equals('w'))
+                {
+                    palabraEncriptada += "23";
+                }
+                else if(item.Equals('x'))
+                {
+                    palabraEncriptada += "24";
+                }
+                else if(item.Equals('y'))
+                {
+                    palabraEncriptada += "25";
+                }
+                else if(item.Equals('z'))
+                {
+                    palabraEncriptada += "26";
+                }
+                else if(item.Equals('ñ'))
+                {
+                    palabraEncriptada += "27";
+                }
+                palabraEncriptada+="-";
+            }
+            ;
+            palabraEncriptada = palabraEncriptada.Remove(palabraEncriptada.LastIndexOf('-'),1);
+            palabraEncriptada+=" ";
+        }
+
+        return palabraEncriptada.TrimEnd();
     }
 
     public string DecodificadorNumerico(string palabraClave)
@@ -139,4 +261,23 @@ public class Cifrado : ICifrado
         }
         return palabra.TrimEnd();
     }
+
+    public void AñademeAquel()
+    {
+        string nombre = "";
+        nombre = nombre + " Abedul";
+        Console.WriteLine(nombre); // " Abedul"
+
+        int numero = 0;
+        numero = numero + 18;
+        numero = numero + 10 - 1;
+        Console.WriteLine(numero); 
+        // 0189
+        // 189
+        // 01810-1
+        // 018 10 - 1
+        // 27
+
+    }
+
 }
