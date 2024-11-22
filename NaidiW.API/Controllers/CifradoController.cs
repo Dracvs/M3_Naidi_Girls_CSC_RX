@@ -11,7 +11,8 @@ public class CifradoController : ControllerBase
     public async Task<IActionResult> DecodeNumeric(string palabra)
     {
         var cifrado = new Cifrado();
-        var decifrado = cifrado.DecodificadorNumerico(palabra);
+        //var decifrado = cifrado.DecodificadorNumerico(palabra);
+        var decifrado = cifrado.NumberToChar(palabra);
         return Ok(decifrado);
     }
 
@@ -20,7 +21,8 @@ public class CifradoController : ControllerBase
     public async Task<IActionResult> EncodeNumeric(string palabra)
     {
         var cifrado = new Cifrado();
-        var codificado = cifrado.CodificadorNumerico(palabra);
+        //var codificado = cifrado.CodificadorNumerico(palabra);
+        var codificado = cifrado.CharToNumber(palabra);
         return Ok(codificado);
     }
 

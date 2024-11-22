@@ -1,6 +1,7 @@
 namespace NaidiW.Business.Interfaces;
 public interface ICifrado
 {
-    public string DecodificadorNumerico(string palabraClave);
-    public string CodificadorNumerico(string palabra);
+    public string CharToNumber(string palabra);
+
+    public string NumberToChar(string palabra);
 }
